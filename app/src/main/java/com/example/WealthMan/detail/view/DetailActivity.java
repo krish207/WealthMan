@@ -170,11 +170,11 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
         tv1.setText(Html.fromHtml("<a  href='https://www.cnbc.com/quotes/?symbol="+symbolName+"'> "+symbolName+" : CNBC NEWS</a>"));
         tv1.setMovementMethod(LinkMovementMethod.getInstance());
         TextView tv2 = findViewById(R.id.tv2);
-        tv2.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/8242749460030043'> "+symbolName+"'s Highest-Ever EPS Shows A New Trend</a>"));
+        tv2.setText(Html.fromHtml("<a href='https://www.marketwatch.com/investing/stock/"+symbolName+"'> "+symbolName+"'s Marketwatch Investing Stocks</a>"));
         tv2.setMovementMethod(LinkMovementMethod.getInstance());
 
         TextView tv3 = findViewById(R.id.tv3);
-        tv3.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/5750047012237294'>"+symbolName+"'s Brief Stock History</a>"));
+        tv3.setText(Html.fromHtml("<a href='https://finance.yahoo.com/quote/"+symbolName+"'>"+symbolName+": YAHOO FINANCE</a>"));
         tv3.setMovementMethod(LinkMovementMethod.getInstance());
 
 
