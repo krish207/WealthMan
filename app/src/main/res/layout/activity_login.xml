@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.WealthMan.LoginActivity"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="#85bb65"
+    android:gravity="center_horizontal">
+
+
+    android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="#c2ffffff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="127dp"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/round_logo"/>
+            <!--app:srcCompat="@drawable/logo"-->
+
+    <EditText
+        android:id="@+id/edittext_useremail"
+        android:layout_width="234dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/letter"
+        android:inputType="textEmailAddress"
+        android:hint="@string/user_email"
+        android:nextFocusForward="@+id/edittext_password"
+        android:paddingLeft="2dp" />
+
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="227dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:nextFocusForward="@id/button_login" />
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#429740"
+        android:textColor="#ffffff"
+        android:text="@string/login"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="#ffffff"
+            android:text="@string/not_registered"/>
+
+        <TextView
+            android:id="@+id/textview_register"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#429740"
+            android:text="@string/register"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+    <TextView
+        android:id="@+id/textview_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#429740"
+        android:text="@string/forgot"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textColor="#ffffff"
+        android:text=" password?"/>
+
+    </LinearLayout>
+</LinearLayout>
