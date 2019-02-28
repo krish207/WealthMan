@@ -11,12 +11,17 @@ import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.WealthMan.DatabaseHelper;
+import com.example.WealthMan.HomeActivity;
+import com.example.WealthMan.IconAdapter;
+import com.example.WealthMan.IconBean;
 import com.example.WealthMan.R;
 import com.example.WealthMan.TransactionActivity;
 import com.example.WealthMan.detail.bean.DetailLineBean;
@@ -35,6 +40,8 @@ import java.util.Random;
 
 
 public class DetailActivity extends AppCompatActivity implements RequstCallBack, View.OnClickListener {
+
+    private ArrayList<IconBean> mIconBeenList = new ArrayList<>();
 
     //+++++++++++Watch button+++++
     Button watch;
@@ -66,10 +73,13 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
     private ProgressBar progressBar;
     private TextView name;
     private String[] dataList = {"appl"};
+    private ListView lv;
+    private IconAdapter sa;
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         beforeInflateView();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
@@ -106,6 +116,27 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
                     Toast.makeText(DetailActivity.this,
                             "Added to Watch List", Toast.LENGTH_SHORT).show();
 
+                    //**********************************************************************
+/*
+                    DetailActivity.super.onCreate(savedInstanceState);
+                    Intent intent = getIntent();
+                    final int userid = intent.getIntExtra("UserId", 1);
+                    setContentView(R.layout.activity_ativity_test_watchlist);
+                    lv = (ListView)findViewById(R.id.lv);
+                    //为listview添加adapter
+                    lv.setAdapter(new IconAdapter(this,mIconBeenList));
+                    lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                            IconBean stock = mIconBeenList.get(position);
+                            Intent intent = new Intent(DetailActivity.this,com.example.WealthMan.detail.view.DetailActivity.class);
+                            intent.putExtra("Symbol",stock.symbol);
+                            intent.putExtra("UserID",userid);
+                            startActivity(intent);
+                        }
+                    });
+*/
+                    //**********************************************************************
                 } else {
                     builder.setMessage("Remove from watch list?")
                             .setCancelable(false)

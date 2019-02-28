@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class IconAdapter extends BaseAdapter {
@@ -15,6 +16,8 @@ public class IconAdapter extends BaseAdapter {
     public Context mContext;
     public List<IconBean> mlist;
     public LayoutInflater mLayoutInflater;
+
+
     @Override
     public int getCount() {
         return mlist.size();
