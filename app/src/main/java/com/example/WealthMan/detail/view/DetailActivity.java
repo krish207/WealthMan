@@ -167,14 +167,14 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
         //        new list
         final TextView tv1 = findViewById(R.id.tv1);
         tv1.setMovementMethod(new ScrollingMovementMethod());
-        tv1.setText(Html.fromHtml("<a  href='https://api.iextrading.com/1.0/stock/aapl/article/5022287287028639'>Apple: Stress-Valuation</a>"));
+        tv1.setText(Html.fromHtml("<a  href='https://www.cnbc.com/quotes/?symbol="+symbolName+"'> "+symbolName+" : CNBC NEWS</a>"));
         tv1.setMovementMethod(LinkMovementMethod.getInstance());
         TextView tv2 = findViewById(R.id.tv2);
-        tv2.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/8242749460030043'>Apple's Highest-Ever EPS Shows A New Trend</a>"));
+        tv2.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/8242749460030043'> "+symbolName+"'s Highest-Ever EPS Shows A New Trend</a>"));
         tv2.setMovementMethod(LinkMovementMethod.getInstance());
 
         TextView tv3 = findViewById(R.id.tv3);
-        tv3.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/5750047012237294'>The diversity challenge facing tech</a>"));
+        tv3.setText(Html.fromHtml("<a href='https://api.iextrading.com/1.0/stock/aapl/article/5750047012237294'>"+symbolName+"'s Brief Stock History</a>"));
         tv3.setMovementMethod(LinkMovementMethod.getInstance());
 
 
