@@ -116,27 +116,6 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
                     Toast.makeText(DetailActivity.this,
                             "Added to Watch List", Toast.LENGTH_SHORT).show();
 
-                    //**********************************************************************
-/*
-                    DetailActivity.super.onCreate(savedInstanceState);
-                    Intent intent = getIntent();
-                    final int userid = intent.getIntExtra("UserId", 1);
-                    setContentView(R.layout.activity_ativity_test_watchlist);
-                    lv = (ListView)findViewById(R.id.lv);
-                    //为listview添加adapter
-                    lv.setAdapter(new IconAdapter(this,mIconBeenList));
-                    lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-                        @Override
-                        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                            IconBean stock = mIconBeenList.get(position);
-                            Intent intent = new Intent(DetailActivity.this,com.example.WealthMan.detail.view.DetailActivity.class);
-                            intent.putExtra("Symbol",stock.symbol);
-                            intent.putExtra("UserID",userid);
-                            startActivity(intent);
-                        }
-                    });
-*/
-                    //**********************************************************************
                 } else {
                     builder.setMessage("Remove from watch list?")
                             .setCancelable(false)
