@@ -10,6 +10,7 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -140,6 +141,8 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
                 }
             }
         });
+
+
         // +++++++++++++++++ LOGIC FOR WATCH/UNWATCH BUTTON +++++++++++++++++++++++++
 
 
@@ -335,6 +338,19 @@ public class DetailActivity extends AppCompatActivity implements RequstCallBack,
         }
         discountView.setDate(newchart, maxAverage, minAverage);
         loading(false);
+    }
+
+//REFRESH THE HOMEACTIVITY WHEN THE BACK BUTTON IS PRESSED
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent Refresh = new Intent(DetailActivity.this,HomeActivity.class);
+            Refresh.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(Refresh);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
